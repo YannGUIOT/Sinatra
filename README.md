@@ -9,7 +9,8 @@
 
 - 🌱 I’m currently learning **ruby 🛑**
 
-- 💬 Ask me about **anything ! 🤷‍♂️**
+- 💬 Today i have work on this Sinatra Gossip Project
+in your terminal tap `$ bundle` `shotgun -p 4567` & open this <a href="http://localhost:4567/" target="blank">link</a> in your favorite browser !
 
 - 📫 How to reach me -> **guiot_yann@hotmail.fr**
 
