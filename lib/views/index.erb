@@ -1,21 +1,28 @@
 <html>
   <head>
     <title>The Gossip Project</title>
+    <link rel="stylesheet" type="text/css" href='/css/style.css'>
   </head>
   <body>
-  <h1>Crée un potin !</h1>
-  <p>Balance ton potin via le formulaire ci-dessous</p>
-  <form action='/gossips/new/' method='POST'>
-    Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-    Balance ton potin : <input type='text' name='gossip_content'/><br/>
-    <input type='submit'/>
-  </form>
-  <h2>Voici la liste des Gossips :</h2>
-  <% gossips.each do |gossip| %>
+  <div class="top">
+  <h1> ⇒ <a href="/gossips/new/">Create New Gossip</a> ⇐ </h1>
+  </div>
+  <div class="middle">
+  <h2>GOSSIP LIST</h2>
+  
+  <% gossips.each.with_index do |gossip, index| %>
     <p>
-      <%= gossip.author %><br/>
-      <%= gossip.content %>
+      <div class="list">
+      <div class="author"><%= gossip.author %></div>
+      <div class="content"><%= gossip.content %></div>
+      <div class="buttons"><input type="button" onclick="location.href='/gossips/<%= index %>/edit/';" value="EDIT"/></div>
+      <div class="buttons"><input type="button" onclick="location.href='gossips/<%= index %>';" value="VIEW"/></div>
+      </div>
     </p>
   <% end %>
+
+  </div>
+
+
   </body>
 </html>

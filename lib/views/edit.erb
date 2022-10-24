@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>EDIT GOSSIP</title>
+    <link rel="stylesheet" type="text/css" href='/css/style.css'>
+  </head>
+  <body>
+    <h1>EDIT GOSSIP N°<%= id +1%></h1>
+    <form action='/gossips/<%= id%>/edit/' method='POST'>
+      Edit Author : <input type='text' name='gossip_author' value="<%= gossip.author%>"/><br/>
+      Edit Gossip : <input type='text' name='gossip_content' value="<%= gossip.content%>"/><br/>
+      <input type='submit'/>
+    </form>
+    <br/>
+    <b><a href="/">Back to Menu</a></b>
+  </body>
+</html>

@@ -1,11 +1,29 @@
 <html>
   <head>
-    <title>Gossip n°<%x%></title>
+    <title>Gossip n°<%= id +1 %></title>
+    <link rel="stylesheet" type="text/css" href='/css/style.css'>
   </head>
   <body>
-    <p>
-      <%= gossip<%x%>.author %><br/>
-      <%= gossip<%x%>.content %>
-    </p>
+    <div class="top"></br>
+    <h2> GOSSIP N° <%= id +1%></h2>
+    </div>
+    <div class="middle"></br>
+    <p><i> " <%= gossip.content %> "</i> By <%= gossip.author %><br/><br/></p>
+    <h2>Comments</h2><br/>
+    <% comments.each_with_index do |comment, index|%>
+    <p>Comment n°<%=index + 1 %> : "
+    <i><%=comment.content%></i>" By <b><%=comment.author%></b><br></p>
+    <%end%>
+    </div>
+    <div class="bottom">
+    <br/><br/>
+    <form action='/gossips/<%= id%>' method='POST'> Add New Comment <br>
+    <b>&nbsp; &nbsp; Author: <b><input type='text' name='comment_author'/><br/>
+    <b>Comment: <b><input type='text' name='comment_content'/><br/>
+    <input type='submit'/>
+    </form>
+    <br/><br/><br/><br/>
+    <b><a href="/">Back to Menu</a></b>
+    </div>
   </body>
 </html>
