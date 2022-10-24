@@ -10,5 +10,12 @@
     Balance ton potin : <input type='text' name='gossip_content'/><br/>
     <input type='submit'/>
   </form>
+  <h2>Voici la liste des Gossips :</h2>
+  <% gossips.each do |gossip| %>
+    <p>
+      <%= gossip.author %><br/>
+      <%= gossip.content %>
+    </p>
+  <% end %>
   </body>
 </html>
