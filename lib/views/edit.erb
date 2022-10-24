@@ -4,12 +4,16 @@
     <link rel="stylesheet" type="text/css" href='/css/style.css'>
   </head>
   <body>
-    <h1>EDIT GOSSIP N°<%= id +1%></h1>
+    <div class="top">
+    <h2>EDIT GOSSIP N°<%= id +1%></h2>
+    </div>
+    <div class="middle"><br/>
     <form action='/gossips/<%= id%>/edit/' method='POST'>
-      Edit Author : <input type='text' name='gossip_author' value="<%= gossip.author%>"/><br/>
-      Edit Gossip : <input type='text' name='gossip_content' value="<%= gossip.content%>"/><br/>
+      Edit Author : <input type='text' name='gossip_author' value="<%= gossip.author%>"/><br/><br/>
+      Edit Gossip : <input type='text' name='gossip_content' value="<%= gossip.content%>"/><br/><br/>
       <input type='submit'/>
     </form>
+    </div>
     <br/>
     <b><a href="/">Back to Menu</a></b>
   </body>

@@ -8,6 +8,7 @@ h2, .author
 a
 {
     text-decoration: none;
+    color: rgb(13, 13, 220);
 }
 
 body
@@ -30,7 +31,7 @@ body
 
 .middle
 {
-    width: 600px;
+    width: 700px;
     height: auto;
     font-size: large;
 }
@@ -43,21 +44,34 @@ body
     border: 1px solid rgb(23, 22, 22);
     border-radius: 30px;
     box-shadow: 5px 3px 2px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
+.create
+{
+    width: 370px;
+    height: 52px;
+    margin-left: 120px;
+    margin-top: 20px;
+    background-color: rgba(245, 140, 34, 0.631);
+    border-radius: 20px;
+}
 
 
 .list
 {
     background-color: rgb(237, 159, 103);
-    color: rgb(16, 18, 49);
-    font-size: large;
+    color: rgb(9, 13, 58);
+    font-size: x-large;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 60px;
     border: 1px solid snow;
-    box-shadow: 4px 4px 2px rgb(94, 91, 91) ;
+    box-shadow: 4px 4px 2px rgb(133, 131, 131) ;
     border-radius: 25px;
     align-items: center;
 }
@@ -81,5 +95,9 @@ body
     width: 10%;
 }
 
+.add
+{
+    margin-left: 5em;
+}
 
 
